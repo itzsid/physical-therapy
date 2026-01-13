@@ -2,6 +2,7 @@ import { Program } from '../../types';
 import { neckProgram } from './neck';
 import { shouldersProgram } from './shoulders';
 import { lowerBackProgram } from './lowerBack';
+import { upperBackProgram } from './upperBack';
 import { kneesProgram } from './knees';
 import { hipsProgram } from './hips';
 import { anklesProgram } from './ankles';
@@ -11,7 +12,7 @@ export const programs: Record<string, Program> = {
   'neck': neckProgram,
   'neck-back': neckProgram,
   'shoulders': shouldersProgram,
-  'upper-back': lowerBackProgram, // Upper back uses similar exercises
+  'upper-back': upperBackProgram,
   'lower-back': lowerBackProgram,
   'hips': hipsProgram,
   'glutes': hipsProgram, // Glutes program shares exercises with hips
@@ -40,6 +41,7 @@ export {
   neckProgram,
   shouldersProgram,
   lowerBackProgram,
+  upperBackProgram,
   kneesProgram,
   hipsProgram,
   anklesProgram,
