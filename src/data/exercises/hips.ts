@@ -25,7 +25,7 @@ export const hipsProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/YQmpO9VT2X4',
+          videoUrl: 'https://www.youtube.com/embed/DmVzJUaXnYM',
           difficulty: 'beginner',
           targetArea: 'Hip flexors, psoas'
         },
@@ -42,7 +42,7 @@ export const hipsProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/cCJbwN3yMWA',
+          videoUrl: 'https://www.youtube.com/embed/IYsOcp4pvic',
           difficulty: 'beginner',
           targetArea: 'Piriformis, glutes'
         },
@@ -59,7 +59,7 @@ export const hipsProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/NG9qbvAN3gQ',
+          videoUrl: 'https://www.youtube.com/embed/RA0w_v08Bpc',
           difficulty: 'beginner',
           targetArea: 'Hip rotators'
         },
@@ -76,7 +76,7 @@ export const hipsProgram: Program = {
           ],
           sets: 2,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/mFKl2JBBDGU',
+          videoUrl: 'https://www.youtube.com/embed/IYsOcp4pvic',
           difficulty: 'beginner',
           targetArea: 'Hip joint'
         },
@@ -93,7 +93,7 @@ export const hipsProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds',
-          videoUrl: 'https://www.youtube.com/embed/8n0X_-gPGJ8',
+          videoUrl: 'https://www.youtube.com/embed/RA0w_v08Bpc',
           difficulty: 'beginner',
           targetArea: 'Adductors'
         }
@@ -116,7 +116,7 @@ export const hipsProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/OUgsJ8-Vi0E',
+          videoUrl: 'https://www.youtube.com/embed/FrVfVupelJY',
           difficulty: 'beginner',
           targetArea: 'Glutes'
         },
@@ -133,7 +133,7 @@ export const hipsProgram: Program = {
           ],
           sets: 3,
           reps: 15,
-          videoUrl: 'https://www.youtube.com/embed/kNSj0LGUBCI',
+          videoUrl: 'https://www.youtube.com/embed/z2fMLGq8vh0',
           difficulty: 'beginner',
           targetArea: 'Hip external rotators'
         },
@@ -150,7 +150,7 @@ export const hipsProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/jgh6sGwtTwk',
+          videoUrl: 'https://www.youtube.com/embed/PJhVIXQeqSI',
           difficulty: 'beginner',
           targetArea: 'Glute medius'
         },
@@ -167,7 +167,7 @@ export const hipsProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/TfaFrU6JVBU',
+          videoUrl: 'https://www.youtube.com/embed/FrVfVupelJY',
           difficulty: 'beginner',
           targetArea: 'Gluteus maximus'
         },
@@ -184,7 +184,7 @@ export const hipsProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/4Pd0amZsybI',
+          videoUrl: 'https://www.youtube.com/embed/IYsOcp4pvic',
           difficulty: 'beginner',
           targetArea: 'Hip flexors'
         }
@@ -207,7 +207,7 @@ export const hipsProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/AVAXhy6pl7o',
+          videoUrl: 'https://www.youtube.com/embed/FrVfVupelJY',
           difficulty: 'intermediate',
           targetArea: 'Glutes'
         },
@@ -224,7 +224,7 @@ export const hipsProgram: Program = {
           ],
           sets: 3,
           reps: 15,
-          videoUrl: 'https://www.youtube.com/embed/kNSj0LGUBCI',
+          videoUrl: 'https://www.youtube.com/embed/z2fMLGq8vh0',
           difficulty: 'intermediate',
           targetArea: 'Hip external rotators'
         },
@@ -241,7 +241,7 @@ export const hipsProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/ce3w-EsNJdQ',
+          videoUrl: 'https://www.youtube.com/embed/z2fMLGq8vh0',
           difficulty: 'intermediate',
           targetArea: 'Glute medius'
         },
@@ -258,7 +258,7 @@ export const hipsProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/LaYLfxwIrXU',
+          videoUrl: 'https://www.youtube.com/embed/FrVfVupelJY',
           difficulty: 'intermediate',
           targetArea: 'Glute medius, external rotators'
         },
@@ -275,7 +275,7 @@ export const hipsProgram: Program = {
           ],
           sets: 3,
           reps: 8,
-          videoUrl: 'https://www.youtube.com/embed/0dhLf0mP6zI',
+          videoUrl: 'https://www.youtube.com/embed/IYsOcp4pvic',
           difficulty: 'intermediate',
           targetArea: 'Hip rotators, stability'
         }
@@ -298,7 +298,7 @@ export const hipsProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/2C-uNgKwPLE',
+          videoUrl: 'https://www.youtube.com/embed/PJhVIXQeqSI',
           difficulty: 'advanced',
           targetArea: 'Glutes, quadriceps'
         },
@@ -315,7 +315,7 @@ export const hipsProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/jEy_czb3RKA',
+          videoUrl: 'https://www.youtube.com/embed/FrVfVupelJY',
           difficulty: 'advanced',
           targetArea: 'Glutes, hamstrings'
         },
@@ -332,7 +332,7 @@ export const hipsProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/gwWv7aPcD88',
+          videoUrl: 'https://www.youtube.com/embed/PJhVIXQeqSI',
           difficulty: 'intermediate',
           targetArea: 'Adductors, glutes'
         },
@@ -349,7 +349,7 @@ export const hipsProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/WCFCdxzFBa4',
+          videoUrl: 'https://www.youtube.com/embed/PJhVIXQeqSI',
           difficulty: 'intermediate',
           targetArea: 'Glutes, hip flexors'
         },
@@ -366,7 +366,7 @@ export const hipsProgram: Program = {
           ],
           sets: 1,
           duration: '5 minutes',
-          videoUrl: 'https://www.youtube.com/embed/NG9qbvAN3gQ',
+          videoUrl: 'https://www.youtube.com/embed/RA0w_v08Bpc',
           difficulty: 'intermediate',
           targetArea: 'Full hip complex'
         }

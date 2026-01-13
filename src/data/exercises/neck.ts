@@ -25,7 +25,7 @@ export const neckProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/wQylqaCl8Zo',
+          videoUrl: 'https://www.youtube.com/embed/4zLWc1NS7b4',
           difficulty: 'beginner',
           targetArea: 'Deep neck flexors'
         },
@@ -42,7 +42,7 @@ export const neckProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/lsaHHKv_g7Y',
+          videoUrl: 'https://www.youtube.com/embed/pt5IeRJ4kSM',
           difficulty: 'beginner',
           targetArea: 'Cervical spine'
         },
@@ -59,7 +59,7 @@ export const neckProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/LT_dFRnmdGs',
+          videoUrl: 'https://www.youtube.com/embed/kK4RcvCeIFA',
           difficulty: 'beginner',
           targetArea: 'Upper trapezius'
         },
@@ -76,7 +76,7 @@ export const neckProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/pyP6qE3QWMY',
+          videoUrl: 'https://www.youtube.com/embed/kK4RcvCeIFA',
           difficulty: 'beginner',
           targetArea: 'Levator scapulae'
         },
@@ -93,7 +93,7 @@ export const neckProgram: Program = {
           ],
           sets: 2,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/NAqCVe2mwzM',
+          videoUrl: 'https://www.youtube.com/embed/D7tpdLLDXJE',
           difficulty: 'beginner',
           targetArea: 'Upper trapezius, neck muscles'
         }
@@ -116,7 +116,7 @@ export const neckProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/wQylqaCl8Zo',
+          videoUrl: 'https://www.youtube.com/embed/4zLWc1NS7b4',
           difficulty: 'beginner',
           targetArea: 'Deep neck flexors'
         },
@@ -133,7 +133,7 @@ export const neckProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds',
-          videoUrl: 'https://www.youtube.com/embed/8t3o2N-jyiw',
+          videoUrl: 'https://www.youtube.com/embed/pt5IeRJ4kSM',
           difficulty: 'beginner',
           targetArea: 'Posterior neck muscles'
         },
@@ -150,7 +150,7 @@ export const neckProgram: Program = {
           ],
           sets: 3,
           reps: 8,
-          videoUrl: 'https://www.youtube.com/embed/7k7t3k_2Kec',
+          videoUrl: 'https://www.youtube.com/embed/4zLWc1NS7b4',
           difficulty: 'intermediate',
           targetArea: 'Neck extensors'
         },
@@ -167,7 +167,7 @@ export const neckProgram: Program = {
           ],
           sets: 2,
           duration: '20 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/LT_dFRnmdGs',
+          videoUrl: 'https://www.youtube.com/embed/kK4RcvCeIFA',
           difficulty: 'beginner',
           targetArea: 'Lateral neck muscles'
         },
@@ -184,7 +184,7 @@ export const neckProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/bNmOfyFEDHc',
+          videoUrl: 'https://www.youtube.com/embed/D7tpdLLDXJE',
           difficulty: 'beginner',
           targetArea: 'Rhomboids, mid trapezius'
         }
@@ -207,7 +207,7 @@ export const neckProgram: Program = {
           ],
           sets: 3,
           duration: '10 seconds each direction',
-          videoUrl: 'https://www.youtube.com/embed/3U8M32g5q7Q',
+          videoUrl: 'https://www.youtube.com/embed/4zLWc1NS7b4',
           difficulty: 'intermediate',
           targetArea: 'All neck muscles'
         },
@@ -224,7 +224,7 @@ export const neckProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/0l1r7S-o_4A',
+          videoUrl: 'https://www.youtube.com/embed/4zLWc1NS7b4',
           difficulty: 'intermediate',
           targetArea: 'Neck extensors'
         },
@@ -241,7 +241,7 @@ export const neckProgram: Program = {
           ],
           sets: 3,
           duration: '10-30 seconds',
-          videoUrl: 'https://www.youtube.com/embed/c7gMiTA5V0I',
+          videoUrl: 'https://www.youtube.com/embed/4zLWc1NS7b4',
           difficulty: 'intermediate',
           targetArea: 'Deep neck flexors'
         },
@@ -258,7 +258,7 @@ export const neckProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/OxR9rVvBkhY',
+          videoUrl: 'https://www.youtube.com/embed/D7tpdLLDXJE',
           difficulty: 'intermediate',
           targetArea: 'Scapular stabilizers, posture muscles'
         },
@@ -275,7 +275,7 @@ export const neckProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/V2ZXnuHn2lU',
+          videoUrl: 'https://www.youtube.com/embed/D7tpdLLDXJE',
           difficulty: 'intermediate',
           targetArea: 'Rhomboids, mid trapezius, lats'
         }
@@ -298,7 +298,7 @@ export const neckProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/NrKvDWPDPU4',
+          videoUrl: 'https://www.youtube.com/embed/4zLWc1NS7b4',
           difficulty: 'advanced',
           targetArea: 'Deep neck flexors'
         },
@@ -315,7 +315,7 @@ export const neckProgram: Program = {
           ],
           sets: 3,
           reps: 8,
-          videoUrl: 'https://www.youtube.com/embed/H3nN_XCmUYU',
+          videoUrl: 'https://www.youtube.com/embed/D7tpdLLDXJE',
           difficulty: 'advanced',
           targetArea: 'Deep neck stabilizers'
         },
@@ -332,7 +332,7 @@ export const neckProgram: Program = {
           ],
           sets: 3,
           reps: 8,
-          videoUrl: 'https://www.youtube.com/embed/IvMpaDJFDVk',
+          videoUrl: 'https://www.youtube.com/embed/D7tpdLLDXJE',
           difficulty: 'advanced',
           targetArea: 'Upper back, rotator cuff, neck extensors'
         },
@@ -349,7 +349,7 @@ export const neckProgram: Program = {
           ],
           sets: 2,
           reps: 6,
-          videoUrl: 'https://www.youtube.com/embed/7U_nRz8jIJk',
+          videoUrl: 'https://www.youtube.com/embed/kK4RcvCeIFA',
           difficulty: 'advanced',
           targetArea: 'Cervical joints'
         },
@@ -366,7 +366,7 @@ export const neckProgram: Program = {
           ],
           sets: 1,
           duration: '5 minutes',
-          videoUrl: 'https://www.youtube.com/embed/2N9ilE5XVPI',
+          videoUrl: 'https://www.youtube.com/embed/pt5IeRJ4kSM',
           difficulty: 'intermediate',
           targetArea: 'Full cervical spine'
         }

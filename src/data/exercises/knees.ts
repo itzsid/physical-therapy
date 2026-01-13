@@ -25,7 +25,7 @@ export const kneesProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/1gY4KXl1ld8',
+          videoUrl: 'https://www.youtube.com/embed/ppzDDzy0pRY',
           difficulty: 'beginner',
           targetArea: 'Quadriceps'
         },
@@ -42,7 +42,7 @@ export const kneesProgram: Program = {
           ],
           sets: 3,
           reps: 15,
-          videoUrl: 'https://www.youtube.com/embed/K3_BsuhkW7Q',
+          videoUrl: 'https://www.youtube.com/embed/ppzDDzy0pRY',
           difficulty: 'beginner',
           targetArea: 'Knee joint'
         },
@@ -59,7 +59,7 @@ export const kneesProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/TJUpVfqBBIk',
+          videoUrl: 'https://www.youtube.com/embed/PJhVIXQeqSI',
           difficulty: 'beginner',
           targetArea: 'Quadriceps, hip flexors'
         },
@@ -76,7 +76,7 @@ export const kneesProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/b0-rl6qH7C0',
+          videoUrl: 'https://www.youtube.com/embed/9jMl3V7OPN8',
           difficulty: 'beginner',
           targetArea: 'Gastrocnemius'
         },
@@ -93,7 +93,7 @@ export const kneesProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/Uo5sYnhZ8Sw',
+          videoUrl: 'https://www.youtube.com/embed/9jMl3V7OPN8',
           difficulty: 'beginner',
           targetArea: 'Hamstrings'
         }
@@ -116,7 +116,7 @@ export const kneesProgram: Program = {
           ],
           sets: 3,
           duration: '15-30 seconds',
-          videoUrl: 'https://www.youtube.com/embed/y-wV4Venusw',
+          videoUrl: 'https://www.youtube.com/embed/PJhVIXQeqSI',
           difficulty: 'beginner',
           targetArea: 'Quadriceps'
         },
@@ -133,7 +133,7 @@ export const kneesProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/OUgsJ8-Vi0E',
+          videoUrl: 'https://www.youtube.com/embed/FrVfVupelJY',
           difficulty: 'beginner',
           targetArea: 'Glutes, hamstrings'
         },
@@ -150,7 +150,7 @@ export const kneesProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/jgh6sGwtTwk',
+          videoUrl: 'https://www.youtube.com/embed/PJhVIXQeqSI',
           difficulty: 'beginner',
           targetArea: 'Glute medius'
         },
@@ -167,7 +167,7 @@ export const kneesProgram: Program = {
           ],
           sets: 3,
           reps: 15,
-          videoUrl: 'https://www.youtube.com/embed/kNSj0LGUBCI',
+          videoUrl: 'https://www.youtube.com/embed/z2fMLGq8vh0',
           difficulty: 'beginner',
           targetArea: 'Hip external rotators'
         },
@@ -184,7 +184,7 @@ export const kneesProgram: Program = {
           ],
           sets: 3,
           reps: 15,
-          videoUrl: 'https://www.youtube.com/embed/n3EB9_jNboc',
+          videoUrl: 'https://www.youtube.com/embed/ppzDDzy0pRY',
           difficulty: 'beginner',
           targetArea: 'Quadriceps'
         }
@@ -207,7 +207,7 @@ export const kneesProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/WCFCdxzFBa4',
+          videoUrl: 'https://www.youtube.com/embed/PJhVIXQeqSI',
           difficulty: 'intermediate',
           targetArea: 'Quadriceps, glutes'
         },
@@ -224,7 +224,7 @@ export const kneesProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/m0GcZ24pK6k',
+          videoUrl: 'https://www.youtube.com/embed/PJhVIXQeqSI',
           difficulty: 'intermediate',
           targetArea: 'Quadriceps, glutes'
         },
@@ -241,7 +241,7 @@ export const kneesProgram: Program = {
           ],
           sets: 3,
           reps: 15,
-          videoUrl: 'https://www.youtube.com/embed/BTnkLvz3JhA',
+          videoUrl: 'https://www.youtube.com/embed/ppzDDzy0pRY',
           difficulty: 'intermediate',
           targetArea: 'Vastus medialis (VMO)'
         },
@@ -258,7 +258,7 @@ export const kneesProgram: Program = {
           ],
           sets: 3,
           duration: '30 seconds each leg',
-          videoUrl: 'https://www.youtube.com/embed/mFKl2JBBDGU',
+          videoUrl: 'https://www.youtube.com/embed/9jMl3V7OPN8',
           difficulty: 'intermediate',
           targetArea: 'Knee stabilizers'
         },
@@ -275,7 +275,7 @@ export const kneesProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/ce3w-EsNJdQ',
+          videoUrl: 'https://www.youtube.com/embed/z2fMLGq8vh0',
           difficulty: 'intermediate',
           targetArea: 'Glute medius'
         }
@@ -298,7 +298,7 @@ export const kneesProgram: Program = {
           ],
           sets: 3,
           reps: 8,
-          videoUrl: 'https://www.youtube.com/embed/2C-uNgKwPLE',
+          videoUrl: 'https://www.youtube.com/embed/PJhVIXQeqSI',
           difficulty: 'advanced',
           targetArea: 'Quadriceps, glutes'
         },
@@ -315,7 +315,7 @@ export const kneesProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/Y2TwAAdWRYE',
+          videoUrl: 'https://www.youtube.com/embed/PJhVIXQeqSI',
           difficulty: 'advanced',
           targetArea: 'Quadriceps'
         },
@@ -332,7 +332,7 @@ export const kneesProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/AVAXhy6pl7o',
+          videoUrl: 'https://www.youtube.com/embed/FrVfVupelJY',
           difficulty: 'advanced',
           targetArea: 'Glutes, hamstrings'
         },
@@ -349,7 +349,7 @@ export const kneesProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/xq0-jmMc6mw',
+          videoUrl: 'https://www.youtube.com/embed/z2fMLGq8vh0',
           difficulty: 'intermediate',
           targetArea: 'Glute medius, TFL'
         },
@@ -366,7 +366,7 @@ export const kneesProgram: Program = {
           ],
           sets: 3,
           duration: '30 seconds',
-          videoUrl: 'https://www.youtube.com/embed/4XLEnwUr1d8',
+          videoUrl: 'https://www.youtube.com/embed/ppzDDzy0pRY',
           difficulty: 'intermediate',
           targetArea: 'VMO, adductors'
         }

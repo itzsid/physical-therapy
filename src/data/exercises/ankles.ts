@@ -25,7 +25,7 @@ export const anklesProgram: Program = {
           ],
           sets: 2,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/D2G7KO0ypJU',
+          videoUrl: 'https://www.youtube.com/embed/FJ-nZGxZB-A',
           difficulty: 'beginner',
           targetArea: 'Ankle joint'
         },
@@ -42,7 +42,7 @@ export const anklesProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/b0-rl6qH7C0',
+          videoUrl: 'https://www.youtube.com/embed/9jMl3V7OPN8',
           difficulty: 'beginner',
           targetArea: 'Gastrocnemius'
         },
@@ -59,7 +59,7 @@ export const anklesProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/b0-rl6qH7C0',
+          videoUrl: 'https://www.youtube.com/embed/9jMl3V7OPN8',
           difficulty: 'beginner',
           targetArea: 'Soleus'
         },
@@ -76,7 +76,7 @@ export const anklesProgram: Program = {
           ],
           sets: 1,
           duration: '2 minutes each ankle',
-          videoUrl: 'https://www.youtube.com/embed/D2G7KO0ypJU',
+          videoUrl: 'https://www.youtube.com/embed/FJ-nZGxZB-A',
           difficulty: 'beginner',
           targetArea: 'Ankle mobility'
         },
@@ -93,7 +93,7 @@ export const anklesProgram: Program = {
           ],
           sets: 1,
           duration: '2 minutes each foot',
-          videoUrl: 'https://www.youtube.com/embed/s_HI-B2QXXk',
+          videoUrl: 'https://www.youtube.com/embed/FJ-nZGxZB-A',
           difficulty: 'beginner',
           targetArea: 'Plantar fascia'
         }
@@ -116,7 +116,7 @@ export const anklesProgram: Program = {
           ],
           sets: 3,
           reps: 15,
-          videoUrl: 'https://www.youtube.com/embed/3bUVh8o3znk',
+          videoUrl: 'https://www.youtube.com/embed/FJ-nZGxZB-A',
           difficulty: 'beginner',
           targetArea: 'Foot intrinsics'
         },
@@ -133,7 +133,7 @@ export const anklesProgram: Program = {
           ],
           sets: 3,
           reps: 15,
-          videoUrl: 'https://www.youtube.com/embed/gwLzBJYoWlI',
+          videoUrl: 'https://www.youtube.com/embed/9jMl3V7OPN8',
           difficulty: 'beginner',
           targetArea: 'Gastrocnemius, soleus'
         },
@@ -150,7 +150,7 @@ export const anklesProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/UWloT3yzXfY',
+          videoUrl: 'https://www.youtube.com/embed/FJ-nZGxZB-A',
           difficulty: 'beginner',
           targetArea: 'Ankle dorsiflexors'
         },
@@ -167,7 +167,7 @@ export const anklesProgram: Program = {
           ],
           sets: 3,
           reps: 15,
-          videoUrl: 'https://www.youtube.com/embed/2jS_TGO8xpE',
+          videoUrl: 'https://www.youtube.com/embed/FJ-nZGxZB-A',
           difficulty: 'beginner',
           targetArea: 'Tibialis anterior'
         },
@@ -184,7 +184,7 @@ export const anklesProgram: Program = {
           ],
           sets: 1,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/3bUVh8o3znk',
+          videoUrl: 'https://www.youtube.com/embed/FJ-nZGxZB-A',
           difficulty: 'beginner',
           targetArea: 'Foot intrinsics'
         }
@@ -207,7 +207,7 @@ export const anklesProgram: Program = {
           ],
           sets: 3,
           duration: '30 seconds each leg',
-          videoUrl: 'https://www.youtube.com/embed/mFKl2JBBDGU',
+          videoUrl: 'https://www.youtube.com/embed/9jMl3V7OPN8',
           difficulty: 'intermediate',
           targetArea: 'Ankle stabilizers'
         },
@@ -224,7 +224,7 @@ export const anklesProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/gwLzBJYoWlI',
+          videoUrl: 'https://www.youtube.com/embed/9jMl3V7OPN8',
           difficulty: 'intermediate',
           targetArea: 'Gastrocnemius, soleus'
         },
@@ -241,7 +241,7 @@ export const anklesProgram: Program = {
           ],
           sets: 3,
           reps: 15,
-          videoUrl: 'https://www.youtube.com/embed/2jS_TGO8xpE',
+          videoUrl: 'https://www.youtube.com/embed/FJ-nZGxZB-A',
           difficulty: 'intermediate',
           targetArea: 'Ankle inverters/everters'
         },
@@ -258,7 +258,7 @@ export const anklesProgram: Program = {
           ],
           sets: 3,
           duration: '20 seconds each leg',
-          videoUrl: 'https://www.youtube.com/embed/mFKl2JBBDGU',
+          videoUrl: 'https://www.youtube.com/embed/9jMl3V7OPN8',
           difficulty: 'intermediate',
           targetArea: 'Proprioception'
         },
@@ -275,7 +275,7 @@ export const anklesProgram: Program = {
           ],
           sets: 3,
           reps: 20,
-          videoUrl: 'https://www.youtube.com/embed/5VvEb-WQhXI',
+          videoUrl: 'https://www.youtube.com/embed/FJ-nZGxZB-A',
           difficulty: 'intermediate',
           targetArea: 'Tibialis anterior'
         }
@@ -298,7 +298,7 @@ export const anklesProgram: Program = {
           ],
           sets: 3,
           duration: '30 seconds each leg',
-          videoUrl: 'https://www.youtube.com/embed/mFKl2JBBDGU',
+          videoUrl: 'https://www.youtube.com/embed/9jMl3V7OPN8',
           difficulty: 'advanced',
           targetArea: 'Ankle stabilizers'
         },
@@ -315,7 +315,7 @@ export const anklesProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/Cq3hVujp7ZE',
+          videoUrl: 'https://www.youtube.com/embed/9jMl3V7OPN8',
           difficulty: 'advanced',
           targetArea: 'Gastrocnemius, soleus'
         },
@@ -332,7 +332,7 @@ export const anklesProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/bGIBZUKRdXs',
+          videoUrl: 'https://www.youtube.com/embed/PJhVIXQeqSI',
           difficulty: 'advanced',
           targetArea: 'Ankle dynamic stability'
         },
@@ -349,7 +349,7 @@ export const anklesProgram: Program = {
           ],
           sets: 3,
           reps: 8,
-          videoUrl: 'https://www.youtube.com/embed/z3L2MPh5bIg',
+          videoUrl: 'https://www.youtube.com/embed/PJhVIXQeqSI',
           difficulty: 'advanced',
           targetArea: 'Full lower extremity'
         },
@@ -366,7 +366,7 @@ export const anklesProgram: Program = {
           ],
           sets: 1,
           duration: '5 minutes',
-          videoUrl: 'https://www.youtube.com/embed/D2G7KO0ypJU',
+          videoUrl: 'https://www.youtube.com/embed/FJ-nZGxZB-A',
           difficulty: 'intermediate',
           targetArea: 'Full ankle complex'
         }
