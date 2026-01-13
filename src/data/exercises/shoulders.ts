@@ -25,7 +25,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 2,
           duration: '1 minute each direction',
-          videoUrl: 'https://www.youtube.com/embed/E4KVXb1JLWU',
+          videoUrl: 'https://www.youtube.com/embed/Fpv8MZrGF7I',
           difficulty: 'beginner',
           targetArea: 'Shoulder joint'
         },
@@ -42,7 +42,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/Tw0VPLAi-FI',
+          videoUrl: 'https://www.youtube.com/embed/Fpv8MZrGF7I',
           difficulty: 'beginner',
           targetArea: 'Posterior deltoid, rotator cuff'
         },
@@ -59,7 +59,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/SB0mHkG75OU',
+          videoUrl: 'https://www.youtube.com/embed/Fpv8MZrGF7I',
           difficulty: 'beginner',
           targetArea: 'Pectoralis, anterior deltoid'
         },
@@ -76,7 +76,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/bNmOfyFEDHc',
+          videoUrl: 'https://www.youtube.com/embed/D7tpdLLDXJE',
           difficulty: 'beginner',
           targetArea: 'Rhomboids, mid trapezius'
         },
@@ -93,7 +93,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/XKVl4_LXCvc',
+          videoUrl: 'https://www.youtube.com/embed/Fpv8MZrGF7I',
           difficulty: 'beginner',
           targetArea: 'Shoulder flexors'
         }
@@ -116,7 +116,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/yAwSfxJpBl4',
+          videoUrl: 'https://www.youtube.com/embed/Fpv8MZrGF7I',
           difficulty: 'beginner',
           targetArea: 'Shoulder flexors, serratus anterior'
         },
@@ -133,7 +133,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/sANPXVZY3yw',
+          videoUrl: 'https://www.youtube.com/embed/Fpv8MZrGF7I',
           difficulty: 'beginner',
           targetArea: 'Internal rotators'
         },
@@ -150,7 +150,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds',
-          videoUrl: 'https://www.youtube.com/embed/V8xaWv7B1Ts',
+          videoUrl: 'https://www.youtube.com/embed/Fpv8MZrGF7I',
           difficulty: 'intermediate',
           targetArea: 'Posterior capsule'
         },
@@ -167,7 +167,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/ALkYOyojXv8',
+          videoUrl: 'https://www.youtube.com/embed/D7tpdLLDXJE',
           difficulty: 'beginner',
           targetArea: 'Rhomboids, posterior deltoid'
         },
@@ -184,7 +184,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/XxLgDsZGnQU',
+          videoUrl: 'https://www.youtube.com/embed/Fpv8MZrGF7I',
           difficulty: 'intermediate',
           targetArea: 'External rotators'
         }
@@ -207,7 +207,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/1wVHmFJvqIw',
+          videoUrl: 'https://www.youtube.com/embed/Fpv8MZrGF7I',
           difficulty: 'intermediate',
           targetArea: 'Infraspinatus, teres minor'
         },
@@ -224,7 +224,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/P6vmlGe8JVo',
+          videoUrl: 'https://www.youtube.com/embed/Fpv8MZrGF7I',
           difficulty: 'intermediate',
           targetArea: 'Subscapularis'
         },
@@ -241,7 +241,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/ULpAJFIpaWM',
+          videoUrl: 'https://www.youtube.com/embed/D7tpdLLDXJE',
           difficulty: 'intermediate',
           targetArea: 'Lower trapezius'
         },
@@ -258,7 +258,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/sqfBk2O6zHU',
+          videoUrl: 'https://www.youtube.com/embed/D7tpdLLDXJE',
           difficulty: 'intermediate',
           targetArea: 'Posterior deltoid, rhomboids'
         },
@@ -275,7 +275,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/ALkYOyojXv8',
+          videoUrl: 'https://www.youtube.com/embed/D7tpdLLDXJE',
           difficulty: 'intermediate',
           targetArea: 'Serratus anterior'
         }
@@ -298,7 +298,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/ALkYOyojXv8',
+          videoUrl: 'https://www.youtube.com/embed/D7tpdLLDXJE',
           difficulty: 'advanced',
           targetArea: 'Serratus anterior, pectoralis'
         },
@@ -315,7 +315,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 3,
           reps: 15,
-          videoUrl: 'https://www.youtube.com/embed/BgE8dvSLfgg',
+          videoUrl: 'https://www.youtube.com/embed/D7tpdLLDXJE',
           difficulty: 'intermediate',
           targetArea: 'Posterior deltoid, rhomboids'
         },
@@ -332,7 +332,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 2,
           reps: 8,
-          videoUrl: 'https://www.youtube.com/embed/IvMpaDJFDVk',
+          videoUrl: 'https://www.youtube.com/embed/D7tpdLLDXJE',
           difficulty: 'advanced',
           targetArea: 'Full rotator cuff, upper back'
         },
@@ -349,7 +349,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/dFzUjzfih7k',
+          videoUrl: 'https://www.youtube.com/embed/D7tpdLLDXJE',
           difficulty: 'intermediate',
           targetArea: 'Latissimus dorsi, rhomboids'
         },
@@ -366,7 +366,7 @@ export const shouldersProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/qEwKCR5JCog',
+          videoUrl: 'https://www.youtube.com/embed/D7tpdLLDXJE',
           difficulty: 'advanced',
           targetArea: 'Deltoids, upper trapezius'
         }

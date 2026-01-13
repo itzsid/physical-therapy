@@ -25,7 +25,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/y5EH2TDRB1E',
+          videoUrl: 'https://www.youtube.com/embed/WQHIBf-C-2w',
           difficulty: 'beginner',
           targetArea: 'Lower back, glutes'
         },
@@ -42,7 +42,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 2,
           reps: 15,
-          videoUrl: 'https://www.youtube.com/embed/iN-FPh7r1yg',
+          videoUrl: 'https://www.youtube.com/embed/WQHIBf-C-2w',
           difficulty: 'beginner',
           targetArea: 'Lumbar spine, abdominals'
         },
@@ -59,7 +59,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 2,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/kqnua4rHVVA',
+          videoUrl: 'https://www.youtube.com/embed/dfMiuFsM1o8',
           difficulty: 'beginner',
           targetArea: 'Full spine'
         },
@@ -76,7 +76,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/b6T_L-RwLks',
+          videoUrl: 'https://www.youtube.com/embed/dfMiuFsM1o8',
           difficulty: 'beginner',
           targetArea: 'Lumbar rotators, obliques'
         },
@@ -93,7 +93,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 2,
           duration: '60 seconds',
-          videoUrl: 'https://www.youtube.com/embed/qYi0EGMrKW0',
+          videoUrl: 'https://www.youtube.com/embed/WQHIBf-C-2w',
           difficulty: 'beginner',
           targetArea: 'Lower back, lats'
         }
@@ -116,7 +116,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/KLFUk4D59zQ',
+          videoUrl: 'https://www.youtube.com/embed/FrVfVupelJY',
           difficulty: 'beginner',
           targetArea: 'Transverse abdominis'
         },
@@ -133,7 +133,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/OUgsJ8-Vi0E',
+          videoUrl: 'https://www.youtube.com/embed/FrVfVupelJY',
           difficulty: 'beginner',
           targetArea: 'Glutes, hamstrings'
         },
@@ -150,7 +150,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 3,
           reps: 8,
-          videoUrl: 'https://www.youtube.com/embed/I5xbsA71v1A',
+          videoUrl: 'https://www.youtube.com/embed/FrVfVupelJY',
           difficulty: 'beginner',
           targetArea: 'Core stabilizers'
         },
@@ -167,7 +167,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/cCJbwN3yMWA',
+          videoUrl: 'https://www.youtube.com/embed/DmVzJUaXnYM',
           difficulty: 'beginner',
           targetArea: 'Piriformis, glutes'
         },
@@ -184,7 +184,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 2,
           duration: '30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/YQmpO9VT2X4',
+          videoUrl: 'https://www.youtube.com/embed/DmVzJUaXnYM',
           difficulty: 'beginner',
           targetArea: 'Hip flexors, psoas'
         }
@@ -207,7 +207,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/wiFNA3sqjCA',
+          videoUrl: 'https://www.youtube.com/embed/FrVfVupelJY',
           difficulty: 'intermediate',
           targetArea: 'Core, erector spinae, glutes'
         },
@@ -224,7 +224,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 3,
           duration: '20 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/rexMoyRM-wg',
+          videoUrl: 'https://www.youtube.com/embed/FrVfVupelJY',
           difficulty: 'intermediate',
           targetArea: 'Obliques, quadratus lumborum'
         },
@@ -241,7 +241,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 3,
           reps: 8,
-          videoUrl: 'https://www.youtube.com/embed/z6PJMT2y8GQ',
+          videoUrl: 'https://www.youtube.com/embed/dfMiuFsM1o8',
           difficulty: 'intermediate',
           targetArea: 'Erector spinae, glutes'
         },
@@ -258,7 +258,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/AVAXhy6pl7o',
+          videoUrl: 'https://www.youtube.com/embed/FrVfVupelJY',
           difficulty: 'intermediate',
           targetArea: 'Glutes, hamstrings'
         },
@@ -275,7 +275,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 3,
           duration: '20-30 seconds',
-          videoUrl: 'https://www.youtube.com/embed/pvIjsG5Svck',
+          videoUrl: 'https://www.youtube.com/embed/FrVfVupelJY',
           difficulty: 'intermediate',
           targetArea: 'Full core'
         }
@@ -298,7 +298,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 3,
           reps: 8,
-          videoUrl: 'https://www.youtube.com/embed/2_e4I-brfqs',
+          videoUrl: 'https://www.youtube.com/embed/FrVfVupelJY',
           difficulty: 'intermediate',
           targetArea: 'Rectus abdominis'
         },
@@ -315,7 +315,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 3,
           duration: '20-30 seconds each side',
-          videoUrl: 'https://www.youtube.com/embed/K2VljzCC16g',
+          videoUrl: 'https://www.youtube.com/embed/FrVfVupelJY',
           difficulty: 'advanced',
           targetArea: 'Obliques, QL, glute medius'
         },
@@ -332,7 +332,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 3,
           reps: 12,
-          videoUrl: 'https://www.youtube.com/embed/gwN_nXKVXXI',
+          videoUrl: 'https://www.youtube.com/embed/FrVfVupelJY',
           difficulty: 'intermediate',
           targetArea: 'Hamstrings, glutes, back'
         },
@@ -349,7 +349,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 3,
           reps: 10,
-          videoUrl: 'https://www.youtube.com/embed/I5xbsA71v1A',
+          videoUrl: 'https://www.youtube.com/embed/FrVfVupelJY',
           difficulty: 'advanced',
           targetArea: 'Full core'
         },
@@ -366,7 +366,7 @@ export const lowerBackProgram: Program = {
           ],
           sets: 1,
           duration: '5 minutes',
-          videoUrl: 'https://www.youtube.com/embed/fvEIwcvL3t0',
+          videoUrl: 'https://www.youtube.com/embed/dfMiuFsM1o8',
           difficulty: 'intermediate',
           targetArea: 'Full lumbar spine'
         }
