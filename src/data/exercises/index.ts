@@ -1,30 +1,41 @@
 import { Program } from '../../types';
 import { neckProgram } from './neck';
 import { shouldersProgram } from './shoulders';
+import { chestProgram } from './chest';
+import { armsProgram } from './arms';
+import { coreProgram } from './core';
 import { lowerBackProgram } from './lowerBack';
 import { upperBackProgram } from './upperBack';
-import { kneesProgram } from './knees';
 import { hipsProgram } from './hips';
+import { glutesProgram } from './glutes';
+import { quadricepsProgram } from './quadriceps';
+import { hamstringsProgram } from './hamstrings';
+import { kneesProgram } from './knees';
+import { shinsProgram } from './shins';
+import { calvesProgram } from './calves';
 import { anklesProgram } from './ankles';
 
-// Map body part IDs to their programs
+// Map body part IDs to their unique programs
+// Each body part now has its own dedicated exercise program
 export const programs: Record<string, Program> = {
+  // Front body parts
   'neck': neckProgram,
-  'neck-back': neckProgram,
   'shoulders': shouldersProgram,
+  'chest': chestProgram,
+  'arms': armsProgram,
+  'core': coreProgram,
+  'hips': hipsProgram,
+  'quadriceps': quadricepsProgram,
+  'knees': kneesProgram,
+  'shins': shinsProgram,
+  'ankles': anklesProgram,
+  // Back body parts
+  'neck-back': neckProgram, // Same as front neck - same anatomical area
   'upper-back': upperBackProgram,
   'lower-back': lowerBackProgram,
-  'hips': hipsProgram,
-  'glutes': hipsProgram, // Glutes program shares exercises with hips
-  'quadriceps': kneesProgram, // Quad exercises often overlap with knee rehab
-  'knees': kneesProgram,
-  'hamstrings': hipsProgram, // Hamstring exercises are in hip program
-  'shins': anklesProgram,
-  'calves-back': anklesProgram,
-  'ankles': anklesProgram,
-  'chest': shouldersProgram, // Chest exercises overlap with shoulder work
-  'arms': shouldersProgram, // Arms exercises overlap with shoulder work
-  'core': lowerBackProgram, // Core exercises are in lower back program
+  'glutes': glutesProgram,
+  'hamstrings': hamstringsProgram,
+  'calves-back': calvesProgram,
 };
 
 export const getProgramForBodyPart = (bodyPartId: string): Program | undefined => {
@@ -40,9 +51,17 @@ export const getAllPrograms = (): Program[] => {
 export {
   neckProgram,
   shouldersProgram,
+  chestProgram,
+  armsProgram,
+  coreProgram,
   lowerBackProgram,
   upperBackProgram,
-  kneesProgram,
   hipsProgram,
+  glutesProgram,
+  quadricepsProgram,
+  hamstringsProgram,
+  kneesProgram,
+  shinsProgram,
+  calvesProgram,
   anklesProgram,
 };
