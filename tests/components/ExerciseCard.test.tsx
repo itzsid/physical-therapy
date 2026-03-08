@@ -56,7 +56,8 @@ describe('ExerciseCard', () => {
       />
     );
 
-    expect(screen.getByText('3 sets x 10 reps')).toBeInTheDocument();
+    // Updated: now uses × instead of "x"
+    expect(screen.getByText((_, el) => el?.textContent === '3 × 10')).toBeInTheDocument();
   });
 
   it('should display target area', () => {
@@ -100,7 +101,7 @@ describe('ExerciseCard', () => {
     fireEvent.click(stepsButton);
 
     expect(screen.getByText('Hide Steps')).toBeInTheDocument();
-    expect(screen.getByText('Step-by-Step Instructions:')).toBeInTheDocument();
+    expect(screen.getByText('Instructions')).toBeInTheDocument();
     expect(screen.getByText('Step 1: Do this')).toBeInTheDocument();
     expect(screen.getByText('Step 2: Do that')).toBeInTheDocument();
   });
@@ -114,10 +115,10 @@ describe('ExerciseCard', () => {
       />
     );
 
-    // Find the completion button (the circular checkbox)
+    // Find the completion button (the checkbox-like button)
     const buttons = screen.getAllByRole('button');
     const completeButton = buttons.find((btn) =>
-      btn.classList.contains('rounded-full')
+      btn.style.borderRadius === '8px' && btn.style.width === '28px'
     );
 
     if (completeButton) {
@@ -127,7 +128,7 @@ describe('ExerciseCard', () => {
   });
 
   it('should show checkmark when completed', () => {
-    const { container } = render(
+    render(
       <ExerciseCard
         exercise={mockExercise}
         isCompleted={true}
@@ -135,9 +136,9 @@ describe('ExerciseCard', () => {
       />
     );
 
-    // The card root should have green ring class when completed
-    const card = container.querySelector('.ring-green-500');
-    expect(card).toBeInTheDocument();
+    // Completed card has a top strip with sage color and checkbox filled with sage
+    const svgCheckmark = document.querySelector('svg path[d="M5 13l4 4L19 7"]');
+    expect(svgCheckmark).toBeInTheDocument();
   });
 
   it('should display duration instead of sets/reps when applicable', () => {
@@ -157,6 +158,6 @@ describe('ExerciseCard', () => {
     );
 
     expect(screen.getByText('30 seconds each side')).toBeInTheDocument();
-    expect(screen.queryByText(/sets x/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/×/)).not.toBeInTheDocument();
   });
 });

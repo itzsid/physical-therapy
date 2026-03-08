@@ -17,15 +17,15 @@ export const ProgramPage: React.FC = () => {
 
   if (!bodyPart) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-[60vh] flex items-center justify-center animate-fade-in">
         <div className="text-center p-8">
-          <h1 className="text-2xl font-bold text-gray-800 mb-4">Body Part Not Found</h1>
-          <p className="text-gray-600 mb-6">The requested body part "{bodyPartId}" does not exist.</p>
+          <h1 className="font-display text-xl font-bold text-brand-forest mb-3">Body Part Not Found</h1>
+          <p className="text-brand-stone font-body text-sm mb-6">The requested body part &ldquo;{bodyPartId}&rdquo; does not exist.</p>
           <button
             onClick={handleBack}
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="px-6 py-3 bg-brand-forest text-white rounded-xl hover:bg-brand-sage transition-colors font-display font-bold text-sm"
           >
-            Back to Body Selection
+            Back to Home
           </button>
         </div>
       </div>
@@ -34,15 +34,15 @@ export const ProgramPage: React.FC = () => {
 
   if (!program) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-[60vh] flex items-center justify-center animate-fade-in">
         <div className="text-center p-8">
-          <h1 className="text-2xl font-bold text-gray-800 mb-4">No Program Available</h1>
-          <p className="text-gray-600 mb-6">No exercise program is available for {bodyPart.name} yet.</p>
+          <h1 className="font-display text-xl font-bold text-brand-forest mb-3">No Program Available</h1>
+          <p className="text-brand-stone font-body text-sm mb-6">No exercise program is available for {bodyPart.name} yet.</p>
           <button
             onClick={handleBack}
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="px-6 py-3 bg-brand-forest text-white rounded-xl hover:bg-brand-sage transition-colors font-display font-bold text-sm"
           >
-            Back to Body Selection
+            Back to Home
           </button>
         </div>
       </div>

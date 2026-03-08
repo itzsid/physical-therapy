@@ -18,7 +18,7 @@ describe('AnatomyView', () => {
     );
 
     expect(screen.getByText('Select a Body Part')).toBeInTheDocument();
-    expect(screen.getByText('Click on the area you want to stretch and strengthen')).toBeInTheDocument();
+    expect(screen.getByText('Tap an area to view its exercise program')).toBeInTheDocument();
   });
 
   it('should render front and back view buttons', () => {
@@ -29,8 +29,8 @@ describe('AnatomyView', () => {
       />
     );
 
-    expect(screen.getByText('Front View')).toBeInTheDocument();
-    expect(screen.getByText('Back View')).toBeInTheDocument();
+    expect(screen.getByText('Front')).toBeInTheDocument();
+    expect(screen.getByText('Back')).toBeInTheDocument();
   });
 
   it('should start with front view selected', () => {
@@ -41,8 +41,9 @@ describe('AnatomyView', () => {
       />
     );
 
-    const frontButton = screen.getByText('Front View');
-    expect(frontButton).toHaveClass('bg-blue-600');
+    const frontButton = screen.getByText('Front');
+    // Active state uses terracotta background via inline style
+    expect(frontButton).toHaveStyle({ backgroundColor: '#C4704B' });
   });
 
   it('should switch to back view when clicked', () => {
@@ -53,10 +54,10 @@ describe('AnatomyView', () => {
       />
     );
 
-    const backButton = screen.getByText('Back View');
+    const backButton = screen.getByText('Back');
     fireEvent.click(backButton);
 
-    expect(backButton).toHaveClass('bg-blue-600');
+    expect(backButton).toHaveStyle({ backgroundColor: '#C4704B' });
   });
 
   it('should display selected body part', () => {

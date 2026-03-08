@@ -3,6 +3,17 @@ import { Program, BodyPart } from '../../types';
 import { useProgress } from '../../hooks/useProgress';
 import { WeekView } from './WeekView';
 
+const brand = {
+  forest: '#1B3A2D',
+  sage: '#6B8F71',
+  mint: '#A8D5BA',
+  cream: '#FAF6F1',
+  warm: '#F0E6D8',
+  terracotta: '#C4704B',
+  charcoal: '#2C2C2C',
+  stone: '#8C8577',
+};
+
 interface ProgramViewProps {
   program: Program;
   bodyPart: BodyPart;
@@ -15,28 +26,18 @@ export const ProgramView: React.FC<ProgramViewProps> = ({
   onBack,
 }) => {
   const {
-    getProgress,
-    startProgram,
-    toggleExercise,
-    setCurrentWeek,
-    resetProgress,
-    getTotalProgress,
+    getProgress, startProgram, toggleExercise, setCurrentWeek, resetProgress, getTotalProgress,
   } = useProgress();
 
   const progress = getProgress(program.id);
   const currentWeek = progress?.currentWeek || 1;
   const totalProgress = getTotalProgress(program.id, program);
 
-  // Initialize progress when program is loaded
   useEffect(() => {
-    if (!progress) {
-      startProgram(program);
-    }
+    if (!progress) startProgram(program);
   }, [program, progress, startProgram]);
 
-  const handleToggleExercise = (exerciseId: string) => {
-    toggleExercise(program.id, exerciseId);
-  };
+  const handleToggleExercise = (exerciseId: string) => toggleExercise(program.id, exerciseId);
 
   const handleResetProgress = () => {
     if (window.confirm('Are you sure you want to reset all progress for this program?')) {
@@ -48,76 +49,76 @@ export const ProgramView: React.FC<ProgramViewProps> = ({
   const currentWeekData = program.weeks.find((w) => w.week === currentWeek);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="animate-fade-in" style={{ minHeight: '100vh', background: brand.cream }}>
       {/* Header */}
-      <div className="bg-white shadow-sm sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto px-4 py-4">
+      <div style={{
+        background: `linear-gradient(170deg, ${brand.forest} 0%, #244836 100%)`,
+        position: 'sticky',
+        top: 57,
+        zIndex: 10,
+        boxShadow: '0 4px 20px rgba(27,58,45,0.25)',
+      }}>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '16px 24px' }}>
           <button
             onClick={onBack}
-            className="flex items-center text-gray-600 hover:text-gray-800 mb-3"
+            style={{ display: 'flex', alignItems: 'center', color: brand.mint, background: 'none', border: 'none', cursor: 'pointer', fontSize: 13, fontFamily: "'DM Sans', sans-serif", marginBottom: 12, opacity: 0.8, padding: 0 }}
           >
-            <svg className="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <svg style={{ width: 16, height: 16, marginRight: 6 }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
-            Back to Body Selection
+            Back
           </button>
 
-          <div className="flex items-start justify-between">
+          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
             <div>
-              <h1 className="text-2xl font-bold text-gray-800">{program.title}</h1>
-              <p className="text-gray-600 mt-1">{bodyPart.name} - {program.duration} Week Program</p>
+              <h1 style={{ fontFamily: "'DM Serif Display', serif", fontSize: 22, color: brand.cream, margin: 0, lineHeight: 1.2 }}>{program.title}</h1>
+              <p style={{ fontSize: 13, color: brand.mint, opacity: 0.7, marginTop: 4 }}>{bodyPart.name} &middot; {program.duration} weeks</p>
             </div>
-            <button
-              onClick={handleResetProgress}
-              className="text-sm text-red-600 hover:text-red-800 px-3 py-1 rounded hover:bg-red-50"
-            >
-              Reset Progress
+            <button onClick={handleResetProgress} style={{ fontSize: 12, color: brand.mint, opacity: 0.6, background: 'none', border: 'none', cursor: 'pointer', padding: '4px 8px' }}>
+              Reset
             </button>
           </div>
 
-          {/* Overall Progress */}
-          <div className="mt-4">
-            <div className="flex items-center justify-between text-sm mb-1">
-              <span className="text-gray-600">Overall Progress</span>
-              <span className="font-medium text-gray-800">{totalProgress}%</span>
+          {/* Progress */}
+          <div style={{ marginTop: 14 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, marginBottom: 6 }}>
+              <span style={{ color: brand.mint, opacity: 0.7 }}>Progress</span>
+              <span style={{ color: brand.cream, fontWeight: 700 }}>{totalProgress}%</span>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-3">
-              <div
-                className="bg-blue-600 h-3 rounded-full transition-all duration-300"
-                style={{ width: `${totalProgress}%` }}
-              />
+            <div style={{ width: '100%', height: 8, borderRadius: 100, background: 'rgba(0,0,0,0.2)' }}>
+              <div className="shimmer-bar" style={{ width: `${totalProgress}%`, height: 8, borderRadius: 100, background: `linear-gradient(to right, ${brand.terracotta}, #d4855e)`, transition: 'width 0.5s ease-out' }} />
             </div>
           </div>
         </div>
       </div>
 
       {/* Week Navigation */}
-      <div className="max-w-4xl mx-auto px-4 py-4">
-        <div className="flex gap-2 overflow-x-auto pb-2">
+      <div style={{ maxWidth: 960, margin: '0 auto', padding: '20px 24px 12px' }}>
+        <div style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 4 }}>
           {program.weeks.map((week) => {
             const isActive = currentWeek === week.week;
             const weekProgress = progress
-              ? Math.round(
-                  (week.exercises.filter((ex) => progress.completedExercises[ex.id]).length /
-                    week.exercises.length) *
-                    100
-                )
+              ? Math.round((week.exercises.filter((ex) => progress.completedExercises[ex.id]).length / week.exercises.length) * 100)
               : 0;
-
             return (
               <button
                 key={week.week}
                 onClick={() => setCurrentWeek(program.id, week.week)}
-                className={`flex-shrink-0 px-4 py-3 rounded-lg transition-all ${
-                  isActive
-                    ? 'bg-blue-600 text-white shadow-md'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 shadow'
-                }`}
+                style={{
+                  flexShrink: 0,
+                  padding: '10px 18px',
+                  borderRadius: 14,
+                  border: isActive ? 'none' : `1px solid ${brand.warm}`,
+                  background: isActive ? brand.terracotta : 'white',
+                  color: isActive ? 'white' : brand.forest,
+                  cursor: 'pointer',
+                  fontFamily: "'DM Sans', sans-serif",
+                  transition: 'all 0.2s',
+                  boxShadow: isActive ? '0 4px 12px rgba(196,112,75,0.3)' : 'none',
+                }}
               >
-                <div className="text-sm font-medium">Week {week.week}</div>
-                <div className={`text-xs ${isActive ? 'text-blue-100' : 'text-gray-500'}`}>
-                  {weekProgress}% done
-                </div>
+                <div style={{ fontSize: 12, fontWeight: 700 }}>Week {week.week}</div>
+                <div style={{ fontSize: 10, marginTop: 2, opacity: isActive ? 0.8 : 0.5 }}>{weekProgress}% done</div>
               </button>
             );
           })}
@@ -125,20 +126,21 @@ export const ProgramView: React.FC<ProgramViewProps> = ({
       </div>
 
       {/* Program Description */}
-      <div className="max-w-4xl mx-auto px-4 mb-4">
-        <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
-          <p className="text-blue-800 text-sm">{program.description}</p>
+      <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px 16px' }}>
+        <div style={{
+          borderRadius: 16,
+          padding: 16,
+          background: `${brand.sage}15`,
+          borderLeft: `4px solid ${brand.sage}`,
+        }}>
+          <p style={{ fontSize: 14, color: brand.forest, lineHeight: 1.7, fontStyle: 'italic', margin: 0 }}>{program.description}</p>
         </div>
       </div>
 
       {/* Week Content */}
-      <div className="max-w-4xl mx-auto px-4 pb-8">
+      <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px 40px' }}>
         {currentWeekData && (
-          <WeekView
-            week={currentWeekData}
-            progress={progress}
-            onToggleExercise={handleToggleExercise}
-          />
+          <WeekView week={currentWeekData} progress={progress} onToggleExercise={handleToggleExercise} />
         )}
       </div>
     </div>

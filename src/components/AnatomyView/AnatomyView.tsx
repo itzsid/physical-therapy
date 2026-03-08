@@ -2,6 +2,16 @@ import React, { useState } from 'react';
 import { BodyPart } from '../../types';
 import { BodyPartSvg } from './BodyPartSvg';
 
+const brand = {
+  forest: '#1B3A2D',
+  sage: '#6B8F71',
+  mint: '#A8D5BA',
+  cream: '#FAF6F1',
+  warm: '#F0E6D8',
+  terracotta: '#C4704B',
+  stone: '#8C8577',
+};
+
 interface AnatomyViewProps {
   onSelectBodyPart: (bodyPart: BodyPart) => void;
   selectedBodyPart: BodyPart | null;
@@ -14,38 +24,48 @@ export const AnatomyView: React.FC<AnatomyViewProps> = ({
   const [view, setView] = useState<'front' | 'back'>('front');
 
   return (
-    <div className="flex flex-col items-center p-4">
-      <h2 className="text-2xl font-bold text-gray-800 mb-2">Select a Body Part</h2>
-      <p className="text-gray-600 mb-4 text-center">
-        Click on the area you want to stretch and strengthen
+    <div className="animate-fade-in" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '32px 24px 16px' }}>
+      <h2 style={{ fontFamily: "'DM Serif Display', serif", fontSize: 28, color: brand.forest, marginBottom: 4, textAlign: 'center' }}>
+        Select a Body Part
+      </h2>
+      <p style={{ fontSize: 14, color: brand.stone, marginBottom: 24, textAlign: 'center' }}>
+        Tap an area to view its exercise program
       </p>
 
       {/* View Toggle */}
-      <div className="flex gap-2 mb-6">
-        <button
-          onClick={() => setView('front')}
-          className={`px-6 py-2 rounded-lg font-medium transition-all ${
-            view === 'front'
-              ? 'bg-blue-600 text-white shadow-md'
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-          }`}
-        >
-          Front View
-        </button>
-        <button
-          onClick={() => setView('back')}
-          className={`px-6 py-2 rounded-lg font-medium transition-all ${
-            view === 'back'
-              ? 'bg-blue-600 text-white shadow-md'
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-          }`}
-        >
-          Back View
-        </button>
+      <div style={{ display: 'inline-flex', borderRadius: 100, padding: 4, background: brand.warm, marginBottom: 24 }}>
+        {(['front', 'back'] as const).map((v) => (
+          <button
+            key={v}
+            onClick={() => setView(v)}
+            style={{
+              padding: '8px 24px',
+              borderRadius: 100,
+              border: 'none',
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 13,
+              fontWeight: 600,
+              cursor: 'pointer',
+              transition: 'all 0.2s',
+              background: view === v ? brand.terracotta : 'transparent',
+              color: view === v ? 'white' : brand.forest,
+            }}
+          >
+            {v.charAt(0).toUpperCase() + v.slice(1)}
+          </button>
+        ))}
       </div>
 
-      {/* Body SVG */}
-      <div className="w-full max-w-md bg-gradient-to-b from-gray-50 to-gray-100 rounded-xl p-4 shadow-inner">
+      {/* Body SVG Container */}
+      <div style={{
+        width: '100%',
+        maxWidth: 380,
+        borderRadius: 20,
+        padding: 20,
+        background: 'white',
+        border: `1px solid ${brand.warm}`,
+        boxShadow: '0 2px 12px rgba(27,58,45,0.06)',
+      }}>
         <BodyPartSvg
           view={view}
           onSelectBodyPart={onSelectBodyPart}
@@ -55,17 +75,22 @@ export const AnatomyView: React.FC<AnatomyViewProps> = ({
 
       {/* Selected body part indicator */}
       {selectedBodyPart && (
-        <div className="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
-          <p className="text-blue-800 font-medium">
-            Selected: <span className="font-bold">{selectedBodyPart.name}</span>
+        <div className="animate-slide-up" style={{
+          marginTop: 16,
+          padding: '10px 20px',
+          borderRadius: 100,
+          background: `${brand.terracotta}15`,
+          border: `1px solid ${brand.terracotta}40`,
+        }}>
+          <p style={{ fontSize: 13, color: brand.terracotta, margin: 0 }}>
+            Selected: <strong>{selectedBodyPart.name}</strong>
           </p>
         </div>
       )}
 
-      {/* Instructions */}
-      <div className="mt-6 text-center text-sm text-gray-500">
-        <p>Toggle between front and back views to select different muscle groups</p>
-      </div>
+      <p style={{ marginTop: 20, fontSize: 12, color: brand.stone, opacity: 0.7 }}>
+        Toggle front and back to explore all muscle groups
+      </p>
     </div>
   );
 };

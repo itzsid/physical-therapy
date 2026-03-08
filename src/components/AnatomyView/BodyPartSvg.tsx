@@ -1,13 +1,19 @@
 import React from 'react';
 import { BodyPart } from '../../types';
 
+const brand = {
+  forest: '#1B3A2D',
+  sage: '#6B8F71',
+  mint: '#A8D5BA',
+  terracotta: '#C4704B',
+};
+
 interface BodyPartSvgProps {
   view: 'front' | 'back';
   onSelectBodyPart: (bodyPart: BodyPart) => void;
   selectedBodyPart: BodyPart | null;
 }
 
-// Body part regions with SVG paths for front and back views
 const bodyPartRegions = {
   front: [
     { id: 'neck', name: 'Neck', path: 'M145,60 Q160,55 175,60 L175,90 Q160,95 145,90 Z', cx: 160, cy: 75 },
@@ -51,70 +57,50 @@ export const BodyPartSvg: React.FC<BodyPartSvgProps> = ({
   return (
     <svg
       viewBox="0 0 320 480"
-      className="w-full max-w-xs mx-auto"
-      style={{ maxHeight: '60vh' }}
+      style={{ width: '100%', maxWidth: 280, margin: '0 auto', display: 'block', maxHeight: '58vh' }}
     >
+      <defs>
+        <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#E8C9A0" />
+          <stop offset="100%" stopColor="#D4A574" />
+        </linearGradient>
+      </defs>
+
       {/* Body outline */}
-      <ellipse cx="160" cy="35" rx="35" ry="35" fill="#FFDAB9" stroke="#D4A574" strokeWidth="2" />
-
-      {/* Neck */}
-      <rect x="148" y="65" width="24" height="25" fill="#FFDAB9" stroke="#D4A574" strokeWidth="1" />
-
-      {/* Torso */}
-      <path
-        d="M100,90 Q80,100 80,150 L80,220 Q80,250 110,280 L110,250 L210,250 L210,280 Q240,250 240,220 L240,150 Q240,100 220,90 Z"
-        fill="#FFDAB9"
-        stroke="#D4A574"
-        strokeWidth="2"
-      />
-
-      {/* Arms */}
-      <path
-        d="M80,100 Q60,110 50,150 L50,200 Q50,210 60,210 L85,210 L85,110 Z"
-        fill="#FFDAB9"
-        stroke="#D4A574"
-        strokeWidth="2"
-      />
-      <path
-        d="M240,100 Q260,110 270,150 L270,200 Q270,210 260,210 L235,210 L235,110 Z"
-        fill="#FFDAB9"
-        stroke="#D4A574"
-        strokeWidth="2"
-      />
-
-      {/* Legs */}
-      <path
-        d="M115,250 L115,430 Q115,450 130,455 L150,455 Q155,450 155,430 L155,250 Z"
-        fill="#FFDAB9"
-        stroke="#D4A574"
-        strokeWidth="2"
-      />
-      <path
-        d="M165,250 L165,430 Q165,450 170,455 L190,455 Q205,450 205,430 L205,250 Z"
-        fill="#FFDAB9"
-        stroke="#D4A574"
-        strokeWidth="2"
-      />
+      <ellipse cx="160" cy="35" rx="35" ry="35" fill="url(#skinGrad)" stroke="#C4A882" strokeWidth="1.5" />
+      <rect x="148" y="65" width="24" height="25" fill="url(#skinGrad)" stroke="#C4A882" strokeWidth="1" rx="2" />
+      <path d="M100,90 Q80,100 80,150 L80,220 Q80,250 110,280 L110,250 L210,250 L210,280 Q240,250 240,220 L240,150 Q240,100 220,90 Z" fill="url(#skinGrad)" stroke="#C4A882" strokeWidth="1.5" />
+      <path d="M80,100 Q60,110 50,150 L50,200 Q50,210 60,210 L85,210 L85,110 Z" fill="url(#skinGrad)" stroke="#C4A882" strokeWidth="1.5" />
+      <path d="M240,100 Q260,110 270,150 L270,200 Q270,210 260,210 L235,210 L235,110 Z" fill="url(#skinGrad)" stroke="#C4A882" strokeWidth="1.5" />
+      <path d="M115,250 L115,430 Q115,450 130,455 L150,455 Q155,450 155,430 L155,250 Z" fill="url(#skinGrad)" stroke="#C4A882" strokeWidth="1.5" />
+      <path d="M165,250 L165,430 Q165,450 170,455 L190,455 Q205,450 205,430 L205,250 Z" fill="url(#skinGrad)" stroke="#C4A882" strokeWidth="1.5" />
 
       {/* Clickable regions */}
       {regions.map((region) => {
         const isSelected = selectedBodyPart?.id === region.id;
         return (
-          <g key={region.id} onClick={() => handleClick(region)} className="cursor-pointer">
+          <g key={region.id} onClick={() => handleClick(region)} style={{ cursor: 'pointer' }}>
             <path
               d={region.path}
-              fill={isSelected ? 'rgba(59, 130, 246, 0.5)' : 'rgba(59, 130, 246, 0.1)'}
-              stroke={isSelected ? '#2563eb' : '#3b82f6'}
-              strokeWidth={isSelected ? 3 : 2}
-              className="transition-all duration-200 hover:fill-blue-300/50 hover:stroke-blue-600"
+              fill={isSelected ? `${brand.terracotta}40` : `${brand.sage}18`}
+              stroke={isSelected ? brand.terracotta : brand.sage}
+              strokeWidth={isSelected ? 2.5 : 1.5}
+              rx="4"
+              style={{ transition: 'all 0.2s' }}
             />
             <text
               x={region.cx}
               y={region.cy}
               textAnchor="middle"
               dominantBaseline="middle"
-              className="pointer-events-none text-xs font-medium fill-blue-800"
-              style={{ fontSize: '10px' }}
+              style={{
+                fontSize: '9.5px',
+                fontFamily: "'DM Serif Display', serif",
+                fontWeight: 400,
+                fill: brand.forest,
+                pointerEvents: 'none',
+                userSelect: 'none',
+              }}
             >
               {region.name}
             </text>

@@ -6,29 +6,24 @@ interface VideoPlayerProps {
 }
 
 export const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoUrl, title }) => {
-  // Extract video ID from YouTube URL if it's not already an embed URL
   const getEmbedUrl = (url: string): string => {
-    if (url.includes('/embed/')) {
-      return url;
-    }
-
-    // Handle various YouTube URL formats
+    if (url.includes('/embed/')) return url;
     const videoIdMatch = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s]+)/);
-    if (videoIdMatch) {
-      return `https://www.youtube.com/embed/${videoIdMatch[1]}`;
-    }
-
+    if (videoIdMatch) return `https://www.youtube.com/embed/${videoIdMatch[1]}`;
     return url;
   };
 
-  const embedUrl = getEmbedUrl(videoUrl);
-
   return (
-    <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
+    <div style={{
+      position: 'relative', width: '100%', aspectRatio: '16/9',
+      borderRadius: 14, overflow: 'hidden',
+      background: '#1B3A2D',
+      boxShadow: 'inset 0 2px 6px rgba(0,0,0,0.1)',
+    }}>
       <iframe
-        src={embedUrl}
+        src={getEmbedUrl(videoUrl)}
         title={title}
-        className="absolute inset-0 w-full h-full"
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       />
