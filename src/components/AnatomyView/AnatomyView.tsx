@@ -24,7 +24,7 @@ export const AnatomyView: React.FC<AnatomyViewProps> = ({
   const [view, setView] = useState<'front' | 'back'>('front');
 
   return (
-    <div className="animate-fade-in" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '32px 24px 16px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '32px 24px 16px' }}>
       <h2 style={{ fontFamily: "'DM Serif Display', serif", fontSize: 28, color: brand.forest, marginBottom: 4, textAlign: 'center' }}>
         Select a Body Part
       </h2>

@@ -129,7 +129,7 @@ export const HomePage: React.FC = () => {
 
         {isLoading && <ModelLoadingProgress status={status} progress={progress} progressText={progressText} />}
 
-        {pageState === 'input' && status !== 'unsupported' && (
+        {pageState === 'input' && (
           <>
             {generationError && (
               <div style={{ background: '#fef2f2', border: '1px solid #fecaca', borderRadius: 16, padding: 16, color: '#b91c1c', fontSize: 14, fontFamily: "'DM Sans', sans-serif" }}>
