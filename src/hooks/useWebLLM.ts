@@ -18,6 +18,7 @@ interface UseWebLLMReturn {
   error: string | null;
   initModel: () => Promise<void>;
   generate: (description: string) => Promise<Program>;
+  setApiKey: (key: string) => void;
 }
 
 // API key is read at runtime from sessionStorage to avoid baking secrets into the JS bundle.
@@ -52,6 +53,12 @@ export function useWebLLM(): UseWebLLMReturn {
   const [error, setError] = useState<string | null>(
     getApiKey() ? null : 'Gemini API key not configured.'
   );
+
+  const setApiKey = useCallback((key: string) => {
+    sessionStorage.setItem('gemini_api_key', key);
+    setStatus('ready');
+    setError(null);
+  }, []);
 
   const initModel = useCallback(async () => {
     // No model download needed for Gemini API
@@ -115,5 +122,5 @@ export function useWebLLM(): UseWebLLMReturn {
     }
   }, []);
 
-  return { status, progress, progressText, error, initModel, generate };
+  return { status, progress, progressText, error, initModel, generate, setApiKey };
 }

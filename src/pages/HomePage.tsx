@@ -22,9 +22,69 @@ const brand = {
 
 type PageState = 'input' | 'loading' | 'result';
 
+const ApiKeySetup: React.FC<{ onSave: (key: string) => void }> = ({ onSave }) => {
+  const [key, setKey] = useState('');
+  const [saved, setSaved] = useState(false);
+
+  const handleSave = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (key.trim()) {
+      onSave(key.trim());
+      setSaved(true);
+    }
+  };
+
+  if (saved) return null;
+
+  return (
+    <div style={{ background: 'white', borderRadius: 20, padding: 28, border: `1px solid ${brand.warm}` }}>
+      <h2 style={{ fontFamily: "'DM Serif Display', serif", fontSize: 22, color: brand.forest, margin: '0 0 6px' }}>
+        Set Up AI Programs
+      </h2>
+      <p style={{ fontSize: 13, color: brand.stone, lineHeight: 1.6, marginBottom: 16 }}>
+        To generate personalized exercise programs, enter your{' '}
+        <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer" style={{ color: brand.terracotta, textDecoration: 'underline' }}>
+          Google Gemini API key
+        </a>. Your key stays in your browser and is never sent to our servers.
+      </p>
+      <form onSubmit={handleSave} style={{ display: 'flex', gap: 10 }}>
+        <input
+          type="password"
+          value={key}
+          onChange={(e) => setKey(e.target.value)}
+          placeholder="Paste your Gemini API key"
+          style={{
+            flex: 1, padding: '12px 16px', borderRadius: 100,
+            border: `2px solid ${brand.warm}`, fontSize: 14,
+            fontFamily: "'DM Sans', sans-serif", color: brand.charcoal,
+            background: brand.cream,
+          }}
+        />
+        <button
+          type="submit"
+          disabled={!key.trim()}
+          style={{
+            padding: '12px 24px', borderRadius: 100, border: 'none',
+            background: key.trim() ? brand.forest : brand.warm,
+            color: key.trim() ? 'white' : brand.stone,
+            fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600,
+            cursor: key.trim() ? 'pointer' : 'not-allowed',
+            whiteSpace: 'nowrap' as const,
+          }}
+        >
+          Save Key
+        </button>
+      </form>
+      <p style={{ fontSize: 11, color: brand.stone, marginTop: 10, opacity: 0.7 }}>
+        Free tier includes 15 requests/minute. Key is stored in sessionStorage only.
+      </p>
+    </div>
+  );
+};
+
 export const HomePage: React.FC = () => {
   const navigate = useNavigate();
-  const { status, progress, progressText, generate } = useWebLLM();
+  const { status, progress, progressText, generate, setApiKey } = useWebLLM();
   const { programs: savedPrograms, saveProgram, deleteProgram } = useAIPrograms();
   const [pageState, setPageState] = useState<PageState>('input');
   const [currentProgram, setCurrentProgram] = useState<Program | null>(null);
@@ -136,7 +196,11 @@ export const HomePage: React.FC = () => {
                 {generationError}
               </div>
             )}
-            <AIInputForm onSubmit={handleSubmit} isDisabled={isLoading} />
+            {status === 'unsupported' ? (
+              <ApiKeySetup onSave={setApiKey} />
+            ) : (
+              <AIInputForm onSubmit={handleSubmit} isDisabled={isLoading} />
+            )}
           </>
         )}
 
