@@ -49,7 +49,7 @@ export const ProgramView: React.FC<ProgramViewProps> = ({
   const currentWeekData = program.weeks.find((w) => w.week === currentWeek);
 
   return (
-    <div className="animate-fade-in" style={{ minHeight: '100vh', background: brand.cream }}>
+    <div style={{ minHeight: '100vh', background: brand.cream }}>
       {/* Header */}
       <div style={{
         background: `linear-gradient(170deg, ${brand.forest} 0%, #244836 100%)`,

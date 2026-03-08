@@ -27,7 +27,7 @@ export const WeekView: React.FC<WeekViewProps> = ({
   const progressPercentage = Math.round((completedCount / week.exercises.length) * 100);
 
   return (
-    <div className="animate-fade-in">
+    <div>
       {/* Week Header */}
       <div style={{ marginBottom: 20 }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 }}>
