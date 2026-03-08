@@ -21,15 +21,20 @@ interface UseWebLLMReturn {
 }
 
 // API key is read at runtime from sessionStorage to avoid baking secrets into the JS bundle.
-// In local dev, the key is seeded from the VITE_GEMINI_API_KEY env var on first load.
+// Users set it via: sessionStorage.setItem('gemini_api_key', 'your-key')
+// In dev mode only, the key is seeded from the env var on first load.
 function getApiKey(): string | null {
   const stored = sessionStorage.getItem('gemini_api_key');
   if (stored) return stored;
-  // Seed from env var in dev only (Vite inlines this, but the env var should be empty in CI/production builds)
-  const envKey = import.meta.env.VITE_GEMINI_API_KEY as string | undefined;
-  if (envKey) {
-    sessionStorage.setItem('gemini_api_key', envKey);
-    return envKey;
+  // In dev mode, seed from env var. Use indirect access to prevent Vite from
+  // statically inlining the value into production builds.
+  if (import.meta.env.DEV) {
+    const env = import.meta.env;
+    const envKey = env['VITE_GEMINI_API_KEY'] as string | undefined;
+    if (envKey) {
+      sessionStorage.setItem('gemini_api_key', envKey);
+      return envKey;
+    }
   }
   return null;
 }
