@@ -8,8 +8,7 @@ export type WebLLMStatus =
   | 'idle'
   | 'ready'
   | 'generating'
-  | 'error'
-  | 'unsupported';
+  | 'error';
 
 interface UseWebLLMReturn {
   status: WebLLMStatus;
@@ -18,26 +17,15 @@ interface UseWebLLMReturn {
   error: string | null;
   initModel: () => Promise<void>;
   generate: (description: string) => Promise<Program>;
-  setApiKey: (key: string) => void;
 }
 
 // API key is read at runtime from sessionStorage to avoid baking secrets into the JS bundle.
 // Users set it via: sessionStorage.setItem('gemini_api_key', 'your-key')
 // In dev mode only, the key is seeded from the env var on first load.
-function getApiKey(): string | null {
-  const stored = sessionStorage.getItem('gemini_api_key');
-  if (stored) return stored;
-  // In dev mode, seed from env var. Use indirect access to prevent Vite from
-  // statically inlining the value into production builds.
-  if (import.meta.env.DEV) {
-    const env = import.meta.env;
-    const envKey = env['VITE_GEMINI_API_KEY'] as string | undefined;
-    if (envKey) {
-      sessionStorage.setItem('gemini_api_key', envKey);
-      return envKey;
-    }
-  }
-  return null;
+const DEFAULT_API_KEY = 'AIzaSyDNfme2MPTzSq7h3sEsG9zTrsYlPxFUBx4';
+
+function getApiKey(): string {
+  return sessionStorage.getItem('gemini_api_key') || DEFAULT_API_KEY;
 }
 
 function getGeminiUrl(apiKey: string): string {
@@ -45,20 +33,10 @@ function getGeminiUrl(apiKey: string): string {
 }
 
 export function useWebLLM(): UseWebLLMReturn {
-  const [status, setStatus] = useState<WebLLMStatus>(() =>
-    getApiKey() ? 'ready' : 'unsupported'
-  );
+  const [status, setStatus] = useState<WebLLMStatus>('ready');
   const [progress] = useState(100);
   const [progressText] = useState('');
-  const [error, setError] = useState<string | null>(
-    getApiKey() ? null : 'Gemini API key not configured.'
-  );
-
-  const setApiKey = useCallback((key: string) => {
-    sessionStorage.setItem('gemini_api_key', key);
-    setStatus('ready');
-    setError(null);
-  }, []);
+  const [error, setError] = useState<string | null>(null);
 
   const initModel = useCallback(async () => {
     // No model download needed for Gemini API
@@ -67,10 +45,6 @@ export function useWebLLM(): UseWebLLMReturn {
 
   const generate = useCallback(async (description: string): Promise<Program> => {
     const apiKey = getApiKey();
-    if (!apiKey) {
-      throw new Error('Gemini API key not configured.');
-    }
-
     setStatus('generating');
     setError(null);
 
@@ -122,5 +96,5 @@ export function useWebLLM(): UseWebLLMReturn {
     }
   }, []);
 
-  return { status, progress, progressText, error, initModel, generate, setApiKey };
+  return { status, progress, progressText, error, initModel, generate };
 }
