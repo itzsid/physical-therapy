@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Program, BodyPart } from '../../types';
+import { Program } from '../../types';
 import { useProgress } from '../../hooks/useProgress';
 import { WeekView } from './WeekView';
 
@@ -16,13 +16,11 @@ const brand = {
 
 interface ProgramViewProps {
   program: Program;
-  bodyPart: BodyPart;
   onBack: () => void;
 }
 
 export const ProgramView: React.FC<ProgramViewProps> = ({
   program,
-  bodyPart,
   onBack,
 }) => {
   const {

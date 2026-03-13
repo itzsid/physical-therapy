@@ -52,7 +52,6 @@ export const ProgramPage: React.FC = () => {
   return (
     <ProgramView
       program={program}
-      bodyPart={bodyPart}
       onBack={handleBack}
     />
   );

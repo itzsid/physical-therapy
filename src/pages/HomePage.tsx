@@ -100,7 +100,6 @@ export const HomePage: React.FC = () => {
           <div className="animate-fade-in">
             <ProgramView
               program={currentProgram}
-              bodyPart={{ id: 'ai-custom', name: currentProgram.bodyPart, region: 'front', description: 'AI-generated program' }}
               onBack={handleBackFromResult}
             />
             <div style={{ padding: '16px 0', display: 'flex', gap: 12 }}>
