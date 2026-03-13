@@ -6,6 +6,15 @@ import path from 'path'
 export default defineConfig({
   base: '/physical-therapy/',
   plugins: [react()],
+  server: {
+    proxy: {
+      '/physical-therapy/api/gemini': {
+        target: 'https://pt-gemini-proxy.itzsid.workers.dev',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/physical-therapy\/api\/gemini/, ''),
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

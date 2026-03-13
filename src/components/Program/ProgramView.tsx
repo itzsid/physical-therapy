@@ -72,7 +72,7 @@ export const ProgramView: React.FC<ProgramViewProps> = ({
           <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
             <div>
               <h1 style={{ fontFamily: "'DM Serif Display', serif", fontSize: 22, color: brand.cream, margin: 0, lineHeight: 1.2 }}>{program.title}</h1>
-              <p style={{ fontSize: 13, color: brand.mint, opacity: 0.7, marginTop: 4 }}>{bodyPart.name} &middot; {program.duration} weeks</p>
+              <p style={{ fontSize: 13, color: brand.mint, opacity: 0.7, marginTop: 4 }}>{program.duration} weeks</p>
             </div>
             <button onClick={handleResetProgress} style={{ fontSize: 12, color: brand.mint, opacity: 0.6, background: 'none', border: 'none', cursor: 'pointer', padding: '4px 8px' }}>
               Reset
@@ -136,6 +136,34 @@ export const ProgramView: React.FC<ProgramViewProps> = ({
           <p style={{ fontSize: 14, color: brand.forest, lineHeight: 1.7, fontStyle: 'italic', margin: 0 }}>{program.description}</p>
         </div>
       </div>
+
+      {/* AI Explanation Sections */}
+      {program.isAIGenerated && (program.whyItExists || program.howExercisesHelp) && (
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px 16px', display: 'flex', flexDirection: 'column', gap: 12 }}>
+          {program.whyItExists && (
+            <div style={{
+              borderRadius: 16,
+              padding: 16,
+              background: `${brand.terracotta}10`,
+              borderLeft: `4px solid ${brand.terracotta}`,
+            }}>
+              <p style={{ fontSize: 12, fontWeight: 700, color: brand.terracotta, margin: '0 0 6px', textTransform: 'uppercase', letterSpacing: 0.5 }}>Why this happens</p>
+              <p style={{ fontSize: 14, color: brand.charcoal, lineHeight: 1.7, margin: 0 }}>{program.whyItExists}</p>
+            </div>
+          )}
+          {program.howExercisesHelp && (
+            <div style={{
+              borderRadius: 16,
+              padding: 16,
+              background: `${brand.forest}08`,
+              borderLeft: `4px solid ${brand.sage}`,
+            }}>
+              <p style={{ fontSize: 12, fontWeight: 700, color: brand.forest, margin: '0 0 6px', textTransform: 'uppercase', letterSpacing: 0.5 }}>How these exercises help</p>
+              <p style={{ fontSize: 14, color: brand.charcoal, lineHeight: 1.7, margin: 0 }}>{program.howExercisesHelp}</p>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Week Content */}
       <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px 40px' }}>

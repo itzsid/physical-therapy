@@ -19,18 +19,11 @@ interface UseWebLLMReturn {
   generate: (description: string) => Promise<Program>;
 }
 
-// API key is read at runtime from sessionStorage to avoid baking secrets into the JS bundle.
-// Users set it via: sessionStorage.setItem('gemini_api_key', 'your-key')
-// In dev mode only, the key is seeded from the env var on first load.
-const DEFAULT_API_KEY = 'AIzaSyDNfme2MPTzSq7h3sEsG9zTrsYlPxFUBx4';
-
-function getApiKey(): string {
-  return sessionStorage.getItem('gemini_api_key') || DEFAULT_API_KEY;
-}
-
-function getGeminiUrl(apiKey: string): string {
-  return `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
-}
+// In production, requests go through the Cloudflare Worker proxy (no API key in the browser).
+// In dev, you can override with VITE_GEMINI_PROXY_URL env var.
+const PROXY_URL = import.meta.env.DEV
+  ? '/physical-therapy/api/gemini'
+  : (import.meta.env.VITE_GEMINI_PROXY_URL || 'https://pt-gemini-proxy.itzsid.workers.dev');
 
 export function useWebLLM(): UseWebLLMReturn {
   const [status, setStatus] = useState<WebLLMStatus>('ready');
@@ -44,7 +37,6 @@ export function useWebLLM(): UseWebLLMReturn {
   }, []);
 
   const generate = useCallback(async (description: string): Promise<Program> => {
-    const apiKey = getApiKey();
     setStatus('generating');
     setError(null);
 
@@ -55,7 +47,7 @@ export function useWebLLM(): UseWebLLMReturn {
       const systemInstruction = messages.find(m => m.role === 'system')?.content || '';
       const userMessage = messages.find(m => m.role === 'user')?.content || '';
 
-      const response = await fetch(getGeminiUrl(apiKey), {
+      const response = await fetch(PROXY_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

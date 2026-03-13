@@ -34,6 +34,8 @@ export interface Program {
   weeks: WeekProgram[];
   isAIGenerated?: boolean;
   searchQuery?: string;
+  whyItExists?: string;
+  howExercisesHelp?: string;
 }
 
 export interface Progress {

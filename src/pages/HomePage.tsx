@@ -1,7 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { AnatomyView } from '../components/AnatomyView';
-import { BodyPart, Program } from '../types';
+import { Program } from '../types';
 import { useWebLLM } from '../hooks/useWebLLM';
 import { useAIPrograms } from '../hooks/useAIPrograms';
 import { AIInputForm } from '../components/AIProgram/AIInputForm';
@@ -23,16 +21,11 @@ const brand = {
 type PageState = 'input' | 'loading' | 'result';
 
 export const HomePage: React.FC = () => {
-  const navigate = useNavigate();
   const { status, progress, progressText, generate } = useWebLLM();
   const { programs: savedPrograms, saveProgram, deleteProgram } = useAIPrograms();
   const [pageState, setPageState] = useState<PageState>('input');
   const [currentProgram, setCurrentProgram] = useState<Program | null>(null);
   const [generationError, setGenerationError] = useState<string | null>(null);
-
-  const handleSelectBodyPart = (bodyPart: BodyPart) => {
-    navigate(`/program/${bodyPart.id}`);
-  };
 
   const handleSubmit = useCallback(async (description: string) => {
     setGenerationError(null);
@@ -145,26 +138,6 @@ export const HomePage: React.FC = () => {
         )}
       </div>
 
-      {/* Divider */}
-      <div style={{ padding: '40px 24px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-          <div style={{ flex: 1, height: 1, background: brand.warm }} />
-          <span style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 11,
-            letterSpacing: '0.15em',
-            textTransform: 'uppercase' as const,
-            color: brand.stone,
-            whiteSpace: 'nowrap' as const,
-          }}>
-            Or browse by body part
-          </span>
-          <div style={{ flex: 1, height: 1, background: brand.warm }} />
-        </div>
-      </div>
-
-      {/* Anatomy browser */}
-      <AnatomyView onSelectBodyPart={handleSelectBodyPart} selectedBodyPart={null} />
     </div>
   );
 };
