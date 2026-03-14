@@ -47,27 +47,49 @@ export function useWebLLM(): UseWebLLMReturn {
       const systemInstruction = messages.find(m => m.role === 'system')?.content || '';
       const userMessage = messages.find(m => m.role === 'user')?.content || '';
 
-      const response = await fetch(PROXY_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          system_instruction: { parts: [{ text: systemInstruction }] },
-          contents: [{ role: 'user', parts: [{ text: userMessage }] }],
-          generationConfig: {
-            temperature: 0.3,
-            maxOutputTokens: 8192,
-          },
-        }),
-      });
+      const maxRetries = 3;
+      let lastError: Error | null = null;
+      let data: any = null;
 
-      if (!response.ok) {
-        if (response.status === 429) {
-          throw new Error('AI service is temporarily busy. Please wait a moment and try again.');
+      for (let attempt = 0; attempt < maxRetries; attempt++) {
+        try {
+          if (attempt > 0) {
+            await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+          }
+
+          const response = await fetch(PROXY_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              system_instruction: { parts: [{ text: systemInstruction }] },
+              contents: [{ role: 'user', parts: [{ text: userMessage }] }],
+              generationConfig: {
+                temperature: 0.3,
+                maxOutputTokens: 8192,
+              },
+            }),
+          });
+
+          if (!response.ok) {
+            if (response.status === 429) {
+              lastError = new Error('AI service is temporarily busy. Please wait a moment and try again.');
+              continue;
+            }
+            lastError = new Error(`AI service error (${response.status}). Please try again.`);
+            continue;
+          }
+
+          data = await response.json();
+          lastError = null;
+          break;
+        } catch (fetchErr) {
+          lastError = fetchErr instanceof Error ? fetchErr : new Error('Failed to fetch');
         }
-        throw new Error(`AI service error (${response.status}). Please try again.`);
       }
 
-      const data = await response.json();
+      if (lastError || !data) {
+        throw lastError || new Error('Failed to fetch after retries');
+      }
       const output = data.candidates?.[0]?.content?.parts?.[0]?.text;
 
       if (!output) {
