@@ -1,0 +1,40 @@
+# PhysioFlow
+
+> AI-powered physical therapy exercise program generator
+
+PhysioFlow is a free web application that generates personalized physical therapy exercise programs. Users describe their pain, stiffness, or mobility issue in plain language, and the app creates a multi-week stretching and strengthening program with video demonstrations.
+
+## Features
+
+- AI-generated personalized exercise programs based on user-described symptoms
+- Multi-week progressive routines (stretching and strengthening)
+- Exercise video demonstrations from licensed physical therapists
+- Local progress tracking (no account required)
+- Runs entirely in the browser (privacy-preserving)
+
+## URL
+
+https://itzsid.github.io/physical-therapy/
+
+## How to Use
+
+1. Visit the site
+2. Describe your pain or mobility issue (e.g., "lower back pain from sitting", "stiff neck and shoulders")
+3. The AI generates a personalized multi-week exercise program
+4. Follow the exercises with video guidance
+5. Track your progress over time
+
+## Target Areas
+
+The app can generate programs for any body area including: neck, shoulders, upper back, lower back, hips, knees, ankles, wrists, elbows, and more.
+
+## Tech
+
+- React + TypeScript single-page application
+- Uses Gemini AI for program generation
+- No backend required - runs in browser
+- Progress saved to browser localStorage
+
+## Author
+
+Sid Choudhuri - https://itzsid.github.io/
