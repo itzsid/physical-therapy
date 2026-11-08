@@ -2,64 +2,61 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/physical-therapy/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO Meta Tags -->
-    <title>PhysioFlow - AI-Powered Physical Therapy Exercise Programs</title>
-    <meta name="description" content="Get personalized physical therapy exercise programs powered by AI. Describe your pain or mobility issue and receive custom stretching and strengthening routines with video demonstrations." />
-    <meta name="keywords" content="physical therapy, exercise program, AI therapy, stretching, strengthening, pain relief, mobility, recovery, physiotherapy" />
+    <title>PhysioFlow has moved</title>
     <link rel="canonical" href="https://physioflow-app.github.io/" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://physioflow-app.github.io/" />
-    <meta property="og:title" content="PhysioFlow - AI-Powered Physical Therapy Exercise Programs" />
-    <meta property="og:description" content="Describe your pain or mobility issue and get a personalized exercise program with video demonstrations. Free, AI-powered physical therapy guidance." />
-    <meta property="og:site_name" content="PhysioFlow" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="PhysioFlow - AI-Powered Physical Therapy Exercise Programs" />
-    <meta name="twitter:description" content="Describe your pain or mobility issue and get a personalized exercise program with video demonstrations. Free, AI-powered physical therapy guidance." />
-
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PhysioFlow",
-      "url": "https://physioflow-app.github.io/",
-      "description": "AI-powered physical therapy exercise program generator. Describe your pain or mobility issue and receive personalized stretching and strengthening routines.",
-      "applicationCategory": "HealthApplication",
-      "operatingSystem": "Web Browser",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "featureList": [
-        "AI-generated personalized exercise programs",
-        "Multi-week stretching and strengthening routines",
-        "Exercise video demonstrations",
-        "Progress tracking",
-        "Works offline after initial load"
-      ],
-      "author": {
-        "@type": "Person",
-        "name": "Siddharth Choudhary",
-        "url": "https://itzsid.github.io/"
-      }
-    }
-    </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/physical-therapy/assets/index-39OMp7Zq.js"></script>
-    <link rel="stylesheet" crossorigin href="/physical-therapy/assets/index-D1L1dswr.css">
+    <meta name="robots" content="noindex" />
+    <noscript><meta http-equiv="refresh" content="0; url=https://physioflow-app.github.io/" /></noscript>
+    <style>
+      body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+        background: #FAF6F1; color: #2C2C2C; font-family: 'DM Sans', system-ui, sans-serif; text-align: center; padding: 16px; }
+      h1 { color: #1B3A2D; font-family: Georgia, serif; font-weight: normal; }
+      a { color: #1B3A2D; }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <main>
+      <h1>PhysioFlow has moved</h1>
+      <p>Taking you to <a id="target" href="https://physioflow-app.github.io/">physioflow-app.github.io</a>&hellip;</p>
+    </main>
+    <script>
+      // Redirects the old site (itzsid.github.io/physical-therapy) to the new one.
+      // Saved programs and progress live in this origin's localStorage, which the
+      // new site cannot read, so they are handed over in the URL fragment (never
+      // sent to any server) and imported by https://physioflow-app.github.io/import.
+      (async function () {
+        var NEW_SITE = 'https://physioflow-app.github.io';
+        var path = location.pathname.replace(/^\/physical-therapy/, '') || '/';
+        var next = location.hash.indexOf('#/') === 0 ? location.hash.slice(1) : path;
+        // Only routes that exist on the new site; everything else goes to the homepage.
+        if (!/^\/(program\/[\w-]+\/?)?$/.test(next)) next = '/';
+        var target = NEW_SITE + next;
+
+        try {
+          var programs = JSON.parse(localStorage.getItem('pt-ai-programs') || '[]');
+          var progress = JSON.parse(localStorage.getItem('pt-progress') || '{"programs":{}}');
+          var hasData = (Array.isArray(programs) && programs.length > 0) ||
+            (progress && progress.programs && Object.keys(progress.programs).length > 0);
+          if (hasData && typeof CompressionStream !== 'undefined') {
+            var backup = { app: 'physioflow', version: 1, exportedAt: new Date().toISOString(), programs: programs, progress: progress };
+            var bytes = new TextEncoder().encode(JSON.stringify(backup));
+            var compressed = new Uint8Array(await new Response(
+              new Response(bytes).body.pipeThrough(new CompressionStream('deflate-raw'))
+            ).arrayBuffer());
+            var binary = '';
+            for (var i = 0; i < compressed.length; i += 0x8000) {
+              binary += String.fromCharCode.apply(null, compressed.subarray(i, i + 0x8000));
+            }
+            var encoded = btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+            target = NEW_SITE + '/import#b=z.' + encoded + '&next=' + encodeURIComponent(next);
+          }
+        } catch (error) {
+          // Storage unavailable or unreadable: just redirect.
+        }
+
+        document.getElementById('target').href = target;
+        location.replace(target);
+      })();
+    </script>
   </body>
 </html>
