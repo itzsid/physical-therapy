@@ -1,0 +1,6 @@
+# PhysioFlow
+
+> PhysioFlow has moved to https://physioflow-app.github.io/
+
+PhysioFlow is a free web application that generates personalized physical therapy exercise programs.
+This old address (https://itzsid.github.io/physical-therapy/) only redirects to the new site.

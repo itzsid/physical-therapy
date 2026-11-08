@@ -1,8 +1,18 @@
 # PhysioFlow
 
+> **PhysioFlow has moved.** Development continues at
+> [physioflow-app/physioflow-app.github.io](https://github.com/physioflow-app/physioflow-app.github.io),
+> live at **https://physioflow-app.github.io/**. This repository is retired.
+>
+> The old URL (https://itzsid.github.io/physical-therapy/) is replaced by a redirect page in
+> [`redirect/`](redirect/index.html). It sends visitors to the matching page on the new site
+> (old `#/program/<id>` links included) and carries over saved programs and progress, which
+> live in this origin's browser storage. Publish it with `npm run deploy:redirect`.
+
+
 **AI-powered physical therapy, accessible to everyone.**
 
-**Try it now: [physioflow.app](https://itzsid.github.io/physical-therapy/)**
+**Try it now: [physioflow.app](https://physioflow-app.github.io/)**
 
 ---
 
@@ -57,7 +67,7 @@ npm run dev
 
 ## Usage
 
-1. Open [PhysioFlow](https://itzsid.github.io/physical-therapy/)
+1. Open [PhysioFlow](https://physioflow-app.github.io/)
 2. Describe your pain, stiffness, or mobility issue
 3. Get a personalized multi-week program with explanations
 4. Watch video demonstrations for each exercise
