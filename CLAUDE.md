@@ -1,5 +1,10 @@
 # Claude Session Context - Physical Therapy App
 
+> **Retired.** The app now lives in https://github.com/physioflow-app/physioflow-app.github.io
+> (live at https://physioflow-app.github.io/). Make app changes there. This repository only
+> publishes `redirect/` to the old GitHub Pages URL: `npm run deploy:redirect`.
+> The source below is a historical snapshot and does not build (two modules were never committed).
+
 ## Project Overview
 An interactive physical therapy website where users can:
 - View human anatomy (front and back views)
